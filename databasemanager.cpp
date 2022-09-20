@@ -27,7 +27,7 @@ bool databaseManager::close(QSqlDatabase db)
 bool databaseManager::initDatabase(QSqlDatabase db)
 {
     db = open();
-    db.exec("create table todo (id int, name varchar(255), PRIMARY KEY(id AUTOINCREMENT))");
+    db.exec("CREATE TABLE todo (id INTEGER, name varchar(255))");
     close(db);
     return true;
 }
